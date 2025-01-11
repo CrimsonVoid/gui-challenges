@@ -1,10 +1,10 @@
-import { LitElement, html, unsafeCSS } from 'lit';
+import { LitElement, html } from 'lit';
 import { customElement, query } from 'lit/decorators.js';
-import sheet from './css/compare-elems.css?inline';
+import sheet from './css/compare-elems.css';
 
 @customElement('compare-elems')
 export class CompareElems extends LitElement {
-  static override styles = unsafeCSS(sheet);
+  static override styles = sheet;
 
   @query('.compare', true)
   private _compare!: HTMLElement;
